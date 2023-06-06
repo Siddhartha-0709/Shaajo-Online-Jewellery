@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Order</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link href="/favicon_io/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+  <link href="/favicon_io/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+  <link href="/site.webmanifest" rel="manifest">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background-image: url('/image-assets/order-bg.jpeg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .navbar {
+      background-color: #242B2E;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .navbar-brand {
+      color: white;
+    }
+
+    .container-fluid {
+      background-color: #242B2E;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .flex a button {
+      margin-right: 5px;
+    }
+
+    .flex a:last-child button {
+      margin-right: 4px;
+    }
+
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    center {
+      text-align: center;
+    }
+
+    h1 {
+      color: aliceblue;
+      font-size: 50px;
+      font-weight: bolder;
+    }
+
+    .max-w-md {
+      max-width: 28rem;
+    }
+
+    .bg-white {
+      background-color: #fff;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .shadow-lg {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .w-30 {
+      width: 7.5rem;
+    }
+
+    .h-30 {
+      height: 7.5rem;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .text-gray-700 {
+      color: #4a5568;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .text-white {
+      color: #fff;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .appearance-none {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .border {
+      border-width: 1px;
+    }
+
+    .rounded {
+      border-radius: 0.25rem;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    .leading-tight {
+      line-height: 1.25;
+    }
+
+    .focus\:outline-none:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+
+    .focus\:shadow-outline-blue:focus {
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+
+    .bg-blue-500 {
+      background-color: #3b82f6;
+    }
+
+    .hover\:bg-blue-700:hover {
+      background-color: #2563eb;
+    }
+
+    .text-blue-500 {
+      color: #3b82f6;
+    }
+
+    .hover\:text-blue-700:hover {
+      color: #2563eb;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .rounded {
+      border-radius: 0.25rem;
+    }
+
+    .focus\:outline-none:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+
+    .focus\:shadow-outline-blue:focus {
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+
+    .text-white {
+      color: #fff;
+    }
+
+    .w-6 {
+      width: 1.5rem;
+    }
+
+    .h-6 {
+      height: 1.5rem;
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('header'); -%>
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+      <br>
+      <br>
+      <div class="flex justify-center items-center">
+        <h1 style="color: #242B2E; font-weight: 600; font-size: 30px;">Order Details</h1>
+      </div>
+      <div class="px-4 py-8">
+        <div class="flex justify-center items-center">
+          <img style="height: 340px; width: 340px;" src=<%=image %> alt="Item Image">
+        </div>
+        <center>
+          <br>
+          <p class="text-2xl mb-4">Price: ₹<%= price %></p>
+        </center>
+
+        <div class="px-6 py-4">
+          <form action="/order" method="POST">
+            <select name="userId" id="" style="visibility: hidden;">
+              <option value="<%= userId %>"><%= userId %></option>
+            </select>
+            <select name="price" id="" style="visibility: hidden;">
+              <option value="<%= price %>"></option>
+            </select>
+            <select name="product_id" id="" style="visibility: hidden;">
+              <option value="<%= item_no %>"></option>
+            </select>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Full Name</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="name" type="text" placeholder="Enter your Full Name" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="email">E-Mail Address</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="email" type="email" placeholder="Enter E-Mail Address" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Phone Number</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="phone" type="number" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="Address">Address Details</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="address" type="text" placeholder="Enter your Full Address" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="City">City</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="city" type="text" placeholder="Enter your City" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="City">PIN Code</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="pin" type="number" placeholder="Enter your PIN Code" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="City">Quantity</label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="quantity" type="number" placeholder="Number of Products" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="Payment">Mode of Payment</label>
+              <select name="payment" id="">
+                <option value="Cash">Cash on Delivery</option>
+              </select>
+            </div>
+            <div class="flex items-center justify-end">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit">
+                Order
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('footer'); -%>
+</html>

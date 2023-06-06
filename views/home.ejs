@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaajo Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <%- include('header'); -%>
+        <div class="" style="background-color: #FFFAF4;">
+            <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8" style="padding-top: 30px;">
+                <nav class="bg-gray-800 rounded-lg">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex justify-center h-16">
+                            <div class="flex" style="padding-top: 10px;">
+                                <a href="/error?userId=<%= userId %>"
+                                    class="border-transparent text-white hover:text-gray-200 hover:border-gray-300 px-3 py-2 rounded-md text-base font-ubuntu"
+                                    style="font-size: 20px;">Earrings</a>
+                                <a href="/error?userId=<%= userId %>"
+                                    class="border-transparent text-white hover:text-gray-200 hover:border-gray-300 px-3 py-2 rounded-md text-base font-ubuntu"
+                                    style="font-size: 20px;">Necklaces</a>
+                                <a href="/error?userId=<%= userId %>"
+                                    class="border-transparent text-white hover:text-gray-200 hover:border-gray-300 px-3 py-2 rounded-md text-base font-ubuntu"
+                                    style="font-size: 20px;">Festive Collection</a>
+                                <a href="/error?userId=<%= userId %>"
+                                    class="border-transparent text-white hover:text-gray-200 hover:border-gray-300 px-3 py-2 rounded-md text-base font-ubuntu"
+                                    style="font-size: 20px;">Offers</a>
+                                <a href="/error?userId=<%= userId %>"
+                                    class="border-transparent text-white hover:text-gray-200 hover:border-gray-300 px-3 py-2 rounded-md text-base font-ubuntu"
+                                    style="font-size: 20px;">Your Designs</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <br>    
+                <div class="rounded-lg">
+                    <img src="/image-assets/shaajobanner-1@2x.png" alt="Wallpaper 1" class="rounded-lg">
+                </div>
+                <br>
+                <div class="rounded-lg bg-gray-200 p-4 font-ubuntu" style="background-color: #0C134F; color: antiquewhite;">
+                    <center>
+                        <h2 style="font-size: 30px;">- - - New Arrivals - - -</h2>
+                    </center>
+                </div>
+                <br>
+                <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                    <a href="/order1?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap1.png"
+                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-1</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹400</p>
+                    </a>
+                    <a href="/order2?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap2.png"
+                                alt="Olive drab green insulated bottle with flared screw lid and flat top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-2</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order3?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap3.png"
+                                alt="Person using a pen to cross a task off a productivity paper card."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-3</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹500</p>
+                    </a>
+                    <a href="/order4?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap4.png"
+                                alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-4</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order5?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap5.png"
+                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-5</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹400</p>
+                    </a>
+                    <a href="/order6?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap6.png"
+                                alt="Olive drab green insulated bottle with flared screw lid and flat top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-6</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order7?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap7.png"
+                                alt="Person using a pen to cross a task off a productivity paper card."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-7</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹500</p>
+                    </a>
+                    <a href="/order8?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap8.png"
+                                alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-8</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order9?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap9.png"
+                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-9</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹400</p>
+                    </a>
+                    <a href="/order10?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap10.png"
+                                alt="Olive drab green insulated bottle with flared screw lid and flat top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-10</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order11?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap11.png"
+                                alt="Person using a pen to cross a task off a productivity paper card."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-11</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹500</p>
+                    </a>
+                    <a href="/order12?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap12.png"
+                                alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-12</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order13?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap13.png"
+                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-13</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹400</p>
+                    </a>
+                    <a href="/order14?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap14.png"
+                                alt="Olive drab green insulated bottle with flared screw lid and flat top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-14</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order15?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap15.png"
+                                alt="Person using a pen to cross a task off a productivity paper card."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-15</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹500</p>
+                    </a>
+                    <a href="/order16?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap16.png"
+                                alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-16</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order17?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap17.png"
+                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-17</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹400</p>
+                    </a>
+                    <a href="/order18?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap18.png"
+                                alt="Olive drab green insulated bottle with flared screw lid and flat top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-18</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order19?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap19.png"
+                                alt="Person using a pen to cross a task off a productivity paper card."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-19</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹500</p>
+                    </a>
+                    <a href="/order20?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap20.png"
+                                alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-20</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order21?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap21.png"
+                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-21</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹400</p>
+                    </a>
+                    <a href="/order22?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap22.png"
+                                alt="Olive drab green insulated bottle with flared screw lid and flat top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-22</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order23?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap23.png"
+                                alt="Person using a pen to cross a task off a productivity paper card."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-23</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹500</p>
+                    </a>
+                    <a href="/order24?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap24.png"
+                                alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-24</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order25?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap25.png"
+                                alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-25</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹400</p>
+                    </a>
+                    <a href="/order26?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap26.png"
+                                alt="Olive drab green insulated bottle with flared screw lid and flat top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-26</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                    <a href="/order27?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap27.png"
+                                alt="Person using a pen to cross a task off a productivity paper card."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-27</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹500</p>
+                    </a>
+                    <a href="/order28?userId=<%= userId %>" class="group">
+                        <div
+                            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="/image-assets/products/snap28.png"
+                                alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+                                class="h-full w-full object-cover object-center group-hover:opacity-75">
+                        </div>
+                        <h3 class="mt-4 text-sm text-gray-700">Item-28</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">₹350</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <%- include('footer'); -%>
+</body>
+
+</html>

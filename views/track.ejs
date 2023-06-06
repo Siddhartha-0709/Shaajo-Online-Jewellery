@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Track My Orders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<%- include('header'); -%>
+
+    <body style="background-image: url('/image-assets/track-bg.png');    background-attachment: fixed;">
+        <div class="card">
+            <center>
+                <br>
+                <br>
+                <h1 style="color: aliceblue; font-size: 50px;">Track My Orders</h1>
+                <br>
+                <br>
+            </center>
+            <div class="bg-white shadow-lg rounded-lg w-full max-w-lg p-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900 mb-4">Order Details</h3>
+                <p>User ID - <%= userId %>
+                </p>
+                <% if (orders.length===0) { %>
+                    <p class="text-sm text-gray-500 mb-6">No orders found for this user.</p>
+                    <% } else { %>
+                        <% orders.forEach((order)=> { %>
+                            <div class="mb-6">
+                                <% var image=`/image-assets/products/snap${order.product_id}.png`; %>
+                                    <img src="<%= image %>" alt="Product" class="w-12 h-12 rounded mr-4">
+                            </div>
+                            <dl class="divide-y divide-gray-200">
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">Order ID</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order._id %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">Customer Name</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.name %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">E-Mail ID</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.email %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">Shipping Address</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.address %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">City</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.city %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">PIN Code</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.pin %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">Total Amount</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">₹<%= order.price %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">Order Status</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.order_status %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">Expected Date of Arrival</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.expected_delivery %>
+                                    </dd>
+                                </div>
+                                <div class="py-2">
+                                    <dt class="text-sm font-medium text-gray-500">Remarks</dt>
+                                    <dd class="mt-1 text-sm text-gray-900">
+                                        <%= order.remarks %>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <hr class="my-6 border-5">
+                            <% }); %>
+                                <% } %>
+            </div>
+            <center>
+                <br>
+                <a href="/home?userId=<%= userId %>"><button class="btn btn-success btn-lg btn-block">Home Page</button></a>
+                <br>
+                <br>
+            </center>
+        </div>
+        <%- include('footer'); -%>
+
+    </body>
+
+</html>

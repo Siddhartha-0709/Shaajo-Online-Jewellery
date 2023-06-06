@@ -1,0 +1,12 @@
+/* Add this to your existing CSS or in a separate CSS file */
+#modal .w-64 {
+  width: 16rem;
+}
+
+#modal .h-64 {
+  height: 16rem;
+}
+
+#modal .flex {
+  flex-direction: initial;
+}

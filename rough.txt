@@ -1,0 +1,52 @@
+app.post("/auth", function (req, res) {
+    console.log(req.body);
+    var em = req.body.em;
+    var pass = req.body.pwd;
+    user_email = em;
+    createUserWithEmailAndPassword(auth, em, pass)
+        .then((userCredential) => {
+            // User account created successfully or existing user signed in
+            const user = userCredential.user;
+            userId = user.uid;
+            res.send("HI")
+            // res.sendFile(__dirname + "/public/index2.html");
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            if (errorCode === "auth/email-already-in-use") {
+                // Account already exists, try signing in
+                signInWithEmailAndPassword(auth, em, pass)
+                    .then((userCredential) => {
+                        // Signed in successfully
+                        const user = userCredential.user;
+                        userId = user.uid;
+                        res.sendFile(__dirname + "/public/index2.html");
+                        // ...
+                    })
+                    .catch((error) => {
+                        const signInErrorCode = error.code;
+                        const signInErrorMessage = error.message;
+                        if (signInErrorCode === "auth/wrong-password") {
+                            res.send("The Entered Password is Incorrect")
+                        } else if (signInErrorCode === "auth/user-not-found") {
+                            // User does not exist, handle it
+                            // ...
+                        } else {
+                            // Handle other sign-in errors
+                            // ...
+                        }
+                    });
+            } else {
+                // Handle other registration errors
+                if (errorCode === "auth/weak-password") {
+                    // Weak password, handle it
+                    // ...
+                } else {
+                    // Handle other registration errors
+                    // ...
+                }
+            }
+        });
+})
