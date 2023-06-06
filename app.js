@@ -14,7 +14,6 @@ const auth = getAuth(app2);
 const express = require("express");
 const bodyParser = require("body-parser")
 const app = express();
-const port = 5000;
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
@@ -322,6 +321,7 @@ app.get("/track", function (req, res) {
             res.status(500).send('Error retrieving orders');
         });
 });
+const port = 80;
 app.listen(process.env.PORT || port, function () {
     console.log(`Server is running successfully on port - ${port}`);
 })
