@@ -14,7 +14,7 @@ const auth = getAuth(app2);
 const express = require("express");
 const bodyParser = require("body-parser")
 const app = express();
-// const port = 80;
+const port = 5000;
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
